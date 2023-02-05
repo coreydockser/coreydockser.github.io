@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="img/scrungle.jpeg">
+</head>
+
+<body>
+    <h1> Corey Dockser, Data Journalist </h1>
+    <h2> Clippings: Data Visualization</h2>
+    <h3><a
+            href="https://buffalonews.com/news/local/five-years-under-buffalos-green-code-70-of-variance-requests-are-granted/article_be3f696a-f2f2-11ec-b7e2-8bac03dacf3d.html">Five
+            years under Buffalo's Green Code: 70% of variance requests are granted</a></h3>
+    <div><b><i>Goal:</i></b>
+        <p>Scrape every zoning variance request from the city of Buffalo's public meetings website and create an
+            interactive visual allowing readers to explore the data themselves, as it is data that hasn't been captured
+            before.</p>
+    </div>
+    <div><b><i>Features:</i></b>
+        <p>
+        <ul>
+            <li><i>Linking</i> - Clicking on any of the neighborhoods in the choropleth map filters the other map and
+                the bar chart to just cover that area. This allows readers to see a breakdown for each neighborhood and
+                to look at each request individually if they so wish.</li>
+            <li><i>Filtering</i> – I created five categories and placed each request in the appropriate one. Readers can
+                choose a category from the drop-down menu on the top right or flip through them with the arrow buttons,
+                filtering the other three maps.</li>
+            <li><i>Details on Demand</i> – Hovering over a neighborhood on the choropleth map gives a breakdown of how
+                the zoning board ruled on variance requests from that area. Hovering over a dot on the other map shows
+                details for each request including the address it took place at, what it was for, and when a ruling was
+                issued.</li>
+        </ul>
+        </p>
+    </div>
+
+    <div><b><i>Tools used:</i></b>
+        <dl>
+            <dt>Python – used to scrape, clean, and sort the data.</dt>
+            <dd>Requests – Used along with BeautifulSoup to scrape data from Buffalo's public meetings website.</dd>
+            <dd>BeautifulSoup – Indexes HTML to allow for easy extraction.</dd>
+            <dd>Pandas – Used to clean, filter, sort, and export data.</dd>
+            <dd>Numpy – Used to filter datetimes.</dd>
+            <dd>FuzzyMatcher – Used to match addresses in the public meetings dataset with their counterparts in the
+                city's property assessment database, which includes coordinates for each address, thus allowing them to
+                be mapped.</dd>
+            <dt>Tableau – Used to generate a dashboard featuring a choropleth map showing the frequency of variance
+                requests by neighborhood, a map showing every variance request in the city and how the zoning board
+                ruled on it, a bar chart showing the frequency of each ruling, and a dropdown menu allowing filtering by
+                category.</dt>
+            <dt>OpenRefine – Used to consolidate zoning variances into arbitrary categories to clean up the
+                visualization.</dt>
+
+        </dl>
+
+        <div><b><i>Limitations and Lessons Learned:</i></b>
+            <ul><li><i>Tableau</i> – Tableau is poorly optimized and doesn't translate well to mobile (or to small browser windows) and has a number of other odd limitations like </li></ul>
+        </div>
+    </div>
+
+    <div class='tableauPlaceholder' id='viz1674150786525' style='position: relative '><noscript><a
+                href='https:&#47;&#47;buffalonews.com&#47;'><img
+                    alt='Zoning Variance Requests in Buffalo, NY (2017-2022) '
+                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Zo&#47;ZoningVarianceRequestsinBuffaloNY2017-2022&#47;ZoningVarianceRequestsinBuffaloNY2017-2022&#47;1_rss.png'
+                    style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name'
+                value='ZoningVarianceRequestsinBuffaloNY2017-2022&#47;ZoningVarianceRequestsinBuffaloNY2017-2022' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+                value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Zo&#47;ZoningVarianceRequestsinBuffaloNY2017-2022&#47;ZoningVarianceRequestsinBuffaloNY2017-2022&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+        </object></div>
+    <script type='text/javascript' src="js/tableau.js"></script>
+
+    <h3><a
+            href="https://buffalonews.com/news/local/where-are-all-the-airbnb-rentals-buffalo-officials-unable-to-track-them-despite-law/article_a20b4a3a-1434-11ed-831f-93db05749448.html">Where
+            are all the Airbnb rentals? Buffalo officials unable to track them despite law</a></h3>
+    <div><b><i>Goal:</i></b>
+        <p>Using aggregated data from AirDNA, create an interactive choropleth map to show where in the city Airbnb
+            listings cluster.</p>
+    </div>
+    <div><b><i>Features:</i></b>
+        <p>
+        <ul>
+            <li><i>Linking</i> - Clicking on any of the neighborhoods in the choropleth map filters the other map and
+                the bar chart to just cover that area. This allows readers to see a breakdown for each neighborhood and
+                to look at each request individually if they so wish.</li>
+            <li><i>Filtering</i> – I created five categories and placed each request in the appropriate one. Readers can
+                choose a category from the drop-down menu on the top right or flip through them with the arrow buttons,
+                filtering the other three maps.</li>
+            <li><i>Details on Demand</i> – Hovering over a neighborhood on the choropleth map gives a breakdown of how
+                the zoning board ruled on variance requests from that area. Hovering over a dot on the other map shows
+                details for each request including the address it took place at, what it was for, and when a ruling was
+                issued.</li>
+        </ul>
+        </p>
+    </div>
+
+
+    <img src="img/scrungle.jpeg" width="50%" height="50%">
+
+
+
+
+</body>
+
+</html>
