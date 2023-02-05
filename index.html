@@ -38,28 +38,28 @@
     </div>
 
     <div><b><i>Tools used:</i></b>
-        <dl>
-            <dt>Python – used to scrape, clean, and sort the data.</dt>
+        <ul><dl>
+            <li><dt>Python – used to scrape, clean, and sort the data.</dt>
             <dd>Requests – Used along with BeautifulSoup to scrape data from Buffalo's public meetings website.</dd>
             <dd>BeautifulSoup – Indexes HTML to allow for easy extraction.</dd>
             <dd>Pandas – Used to clean, filter, sort, and export data.</dd>
             <dd>Numpy – Used to filter datetimes.</dd>
             <dd>FuzzyMatcher – Used to match addresses in the public meetings dataset with their counterparts in the
                 city's property assessment database, which includes coordinates for each address, thus allowing them to
-                be mapped.</dd>
-            <dt>Tableau – Used to generate a dashboard featuring a choropleth map showing the frequency of variance
+                be mapped.</dd></li>
+            <li><dt>Tableau – Used to generate a dashboard featuring a choropleth map showing the frequency of variance
                 requests by neighborhood, a map showing every variance request in the city and how the zoning board
                 ruled on it, a bar chart showing the frequency of each ruling, and a dropdown menu allowing filtering by
-                category.</dt>
-            <dt>OpenRefine – Used to consolidate zoning variances into arbitrary categories to clean up the
-                visualization.</dt>
+                category.</dt></li>
+            <li><dt>OpenRefine – Used to consolidate zoning variances into arbitrary categories to clean up the
+                visualization.</dt></li>
 
-        </dl>
-
-        <div><b><i>Limitations and Lessons Learned:</i></b>
-            <ul><li><i>Tableau</i> – Tableau is poorly optimized and doesn't translate well to mobile (or to small browser windows) and has a number of other odd limitations like </li></ul>
-        </div>
+        </dl></ul>
     </div>
+        <div><b><i>Limitations and Lessons Learned:</i></b>
+            <ul><li><i>Tableau</i> – Tableau is poorly optimized and doesn't translate well to mobile (or to small browser windows) and can only be customized up to a point. I chose it because I wasn't sure what form the final visualization would take or even if I could embed a visualization at all, but if I knew this was the product I would create from the beginning I would make it with D3.</li></ul>
+        </div>
+    
 
     <div class='tableauPlaceholder' id='viz1674150786525' style='position: relative '><noscript><a
                 href='https:&#47;&#47;buffalonews.com&#47;'><img
