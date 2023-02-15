@@ -38,28 +38,47 @@
     </div>
 
     <div><b><i>Tools used:</i></b>
-        <ul><dl>
-            <li><dt>Python – used to scrape, clean, and sort the data.</dt>
-            <dd>Requests – Used along with BeautifulSoup to scrape data from Buffalo's public meetings website.</dd>
-            <dd>BeautifulSoup – Indexes HTML to allow for easy extraction.</dd>
-            <dd>Pandas – Used to clean, filter, sort, and export data.</dd>
-            <dd>Numpy – Used to filter datetimes.</dd>
-            <dd>FuzzyMatcher – Used to match addresses in the public meetings dataset with their counterparts in the
-                city's property assessment database, which includes coordinates for each address, thus allowing them to
-                be mapped.</dd></li>
-            <li><dt>Tableau – Used to generate a dashboard featuring a choropleth map showing the frequency of variance
-                requests by neighborhood, a map showing every variance request in the city and how the zoning board
-                ruled on it, a bar chart showing the frequency of each ruling, and a dropdown menu allowing filtering by
-                category.</dt></li>
-            <li><dt>OpenRefine – Used to consolidate zoning variances into arbitrary categories to clean up the
-                visualization.</dt></li>
+        <ul>
+            <dl>
+                <li>
+                    <dt>Python – Used to scrape, clean, and sort the data.</dt>
+                    <dd>Requests – Used along with BeautifulSoup to scrape data from Buffalo's public meetings website.
+                    </dd>
+                    <dd>BeautifulSoup – Indexes HTML to allow for easy extraction.</dd>
+                    <dd>Pandas – Used to clean, filter, sort, and export data.</dd>
+                    <dd>Numpy – Used to filter datetimes.</dd>
+                    <dd>FuzzyMatcher – Used to match addresses in the public meetings dataset with their counterparts in
+                        the
+                        city's property assessment database, which includes coordinates for each address, thus allowing
+                        them to
+                        be mapped.</dd>
+                </li>
+                <li>
+                    <dt>Tableau – Used to generate a dashboard featuring a choropleth map showing the frequency of
+                        variance
+                        requests by neighborhood, a map showing every variance request in the city and how the zoning
+                        board
+                        ruled on it, a bar chart showing the frequency of each ruling, and a dropdown menu allowing
+                        filtering by
+                        category.</dt>
+                </li>
+                <li>
+                    <dt>OpenRefine – Used to consolidate zoning variances into arbitrary categories to clean up the
+                        visualization.</dt>
+                </li>
 
-        </dl></ul>
+            </dl>
+        </ul>
     </div>
-        <div><b><i>Limitations and Lessons Learned:</i></b>
-            <ul><li><i>Tableau</i> – Tableau is poorly optimized and doesn't translate well to mobile (or to small browser windows) and can only be customized up to a point. I chose it because I wasn't sure what form the final visualization would take or even if I could embed a visualization at all, but if I knew this was the product I would create from the beginning I would make it with D3.</li></ul>
-        </div>
-    
+    <div><b><i>Limitations and Lessons Learned:</i></b>
+        <ul>
+            <li><i>Tableau</i> – Tableau is poorly optimized and doesn't translate well to mobile (or to small browser
+                windows) and can only be customized up to a point. I chose it because I wasn't sure what form the final
+                visualization would take or even if I could embed a visualization at all, but if I knew this was the
+                product I would create from the beginning I would make it with D3.</li>
+        </ul>
+    </div>
+
 
     <div class='tableauPlaceholder' id='viz1674150786525' style='position: relative '><noscript><a
                 href='https:&#47;&#47;buffalonews.com&#47;'><img
@@ -94,19 +113,33 @@
     <div><b><i>Features:</i></b>
         <p>
         <ul>
-            <li><i>Linking</i> - Clicking on any of the neighborhoods in the choropleth map filters the other map and
-                the bar chart to just cover that area. This allows readers to see a breakdown for each neighborhood and
-                to look at each request individually if they so wish.</li>
-            <li><i>Filtering</i> – I created five categories and placed each request in the appropriate one. Readers can
-                choose a category from the drop-down menu on the top right or flip through them with the arrow buttons,
-                filtering the other three maps.</li>
-            <li><i>Details on Demand</i> – Hovering over a neighborhood on the choropleth map gives a breakdown of how
-                the zoning board ruled on variance requests from that area. Hovering over a dot on the other map shows
-                details for each request including the address it took place at, what it was for, and when a ruling was
-                issued.</li>
+            <li><i>History</i> - A slider linked to the map allows readers to see data from different years. </li>
+            <li><i>Details on Demand</i> – Hovering over an area on the map reveals the zipcode and average monthly
+                listings for that area.</li>
         </ul>
         </p>
     </div>
+
+    <div><b><i>Tools used:</i></b>
+        <ul>
+            <dl>
+                <li>
+                    <dt>Python – Used to clean and sort the data.</dt>
+                    <dd>Pandas – Used to clean, filter, sort, and export data.</dd>
+                </li>
+                <li>
+                    <dt>ObserableHQ (JavaScript) – Used to generate an interactive choropleth map showing where Airbnb listings are located, using a</dt>
+                </li>
+                <li>
+                    <dt>OpenRefine – Used to consolidate zoning variances into arbitrary categories to clean up the
+                        visualization.</dt>
+                </li>
+
+            </dl>
+        </ul>
+    </div>
+    <iframe width="50%" height="1008" frameborder="0"
+  src="https://observablehq.com/embed/@coreydockser/leaflet-airbnb?cells=viewof+container"></iframe>
 
 
     <img src="img/scrungle.jpeg" width="50%" height="50%">
