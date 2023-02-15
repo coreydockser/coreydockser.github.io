@@ -1,2 +1,2 @@
 # portfolio
-http://coreydockser.com/portfolio/
+https://coreydockser.github.io
