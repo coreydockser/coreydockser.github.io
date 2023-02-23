@@ -8,102 +8,131 @@
     <title>Portfolio</title>
     <link href="css/style.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="img/scrungle.jpeg">
-    <script src="components/header.js" type = "text/javascript" defer></script>
+    <script src="components/header.js" type="text/javascript" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header-component></header-component>
+
     <h2> Clippings: Data Visualization</h2>
-    <h3><a
-            href="https://buffalonews.com/news/local/five-years-under-buffalos-green-code-70-of-variance-requests-are-granted/article_be3f696a-f2f2-11ec-b7e2-8bac03dacf3d.html">Five
-            years under Buffalo's Green Code: 70% of variance requests are granted</a></h3>
-    <div><b><i>Goal:</i></b>
-        <p>Scrape every zoning variance request from the city of Buffalo's public meetings website and create an
-            interactive visual allowing readers to explore the data themselves, as it is data that hasn't been captured
-            before.</p>
-    </div>
-    <div><b><i>Features:</i></b>
-        <p>
-        <ul>
-            <li><i>Linking</i> - Clicking on any of the neighborhoods in the choropleth map filters the other map and
-                the bar chart to just cover that area. This allows readers to see a breakdown for each neighborhood and
-                to look at each request individually if they so wish.</li>
-            <li><i>Filtering</i> – I created five categories and placed each request in the appropriate one. Readers can
-                choose a category from the drop-down menu on the top right or flip through them with the arrow buttons,
-                filtering the other three maps.</li>
-            <li><i>Details on Demand</i> – Hovering over a neighborhood on the choropleth map gives a breakdown of how
-                the zoning board ruled on variance requests from that area. Hovering over a dot on the other map shows
-                details for each request including the address it took place at, what it was for, and when a ruling was
-                issued.</li>
-        </ul>
-        </p>
-    </div>
+    <div class="row">
+        <div class="column">
+            <h3><a
+                    href="https://buffalonews.com/news/local/five-years-under-buffalos-green-code-70-of-variance-requests-are-granted/article_be3f696a-f2f2-11ec-b7e2-8bac03dacf3d.html">Five
+                    years under Buffalo's Green Code: 70% of variance requests are granted</a></h3>
+            <div><b><i>Goal:</i></b>
+                <p>Scrape every zoning variance request from the city of Buffalo's public meetings website and create an
+                    interactive visual allowing readers to explore the data themselves, as it is data that hasn't been
+                    captured
+                    before.</p>
+            </div>
+            <div><b><i>Features:</i></b>
+                <p>
+                <ul>
+                    <li><i>Linking</i> - Clicking on any of the neighborhoods in the choropleth map filters the other
+                        map and
+                        the bar chart to just cover that area. This allows readers to see a breakdown for each
+                        neighborhood and
+                        to look at each request individually if they so wish.</li>
+                    <li><i>Filtering</i> – I created five categories and placed each request in the appropriate one.
+                        Readers can
+                        choose a category from the drop-down menu on the top right or flip through them with the arrow
+                        buttons,
+                        filtering the other three maps.</li>
+                    <li><i>Details on Demand</i> – Hovering over a neighborhood on the choropleth map gives a breakdown
+                        of how
+                        the zoning board ruled on variance requests from that area. Hovering over a dot on the other map
+                        shows
+                        details for each request including the address it took place at, what it was for, and when a
+                        ruling was
+                        issued.</li>
+                </ul>
+                </p>
+            </div>
 
-    <div><b><i>Tools used:</i></b>
-        <ul>
-            <dl>
-                <li>
-                    <dt>Python – Used to scrape, clean, and sort the data.</dt>
-                    <dd>Requests – Used along with BeautifulSoup to scrape data from Buffalo's public meetings website.
-                    </dd>
-                    <dd>BeautifulSoup – Indexes HTML to allow for easy extraction.</dd>
-                    <dd>Pandas – Used to clean, filter, sort, and export data.</dd>
-                    <dd>Numpy – Used to filter datetimes.</dd>
-                    <dd>FuzzyMatcher – Used to match addresses in the public meetings dataset with their counterparts in
+            <div><b><i>Tools used:</i></b>
+                <ul>
+                    <dl>
+                        <li>
+                            <dt>Python – Used to scrape, clean, and sort the data.</dt>
+                            <dd>Requests – Used along with BeautifulSoup to scrape data from Buffalo's public meetings
+                                website.
+                            </dd>
+                            <dd>BeautifulSoup – Indexes HTML to allow for easy extraction.</dd>
+                            <dd>Pandas – Used to clean, filter, sort, and export data.</dd>
+                            <dd>Numpy – Used to filter datetimes.</dd>
+                            <dd>FuzzyMatcher – Used to match addresses in the public meetings dataset with their
+                                counterparts in
+                                the
+                                city's property assessment database, which includes coordinates for each address, thus
+                                allowing
+                                them to
+                                be mapped.</dd>
+                        </li>
+                        <li>
+                            <dt>Tableau – Used to generate a dashboard featuring a choropleth map showing the frequency
+                                of
+                                variance
+                                requests by neighborhood, a map showing every variance request in the city and how the
+                                zoning
+                                board
+                                ruled on it, a bar chart showing the frequency of each ruling, and a dropdown menu
+                                allowing
+                                filtering by
+                                category.</dt>
+                        </li>
+                        <li>
+                            <dt>OpenRefine – Used to consolidate zoning variances into arbitrary categories to clean up
+                                the
+                                visualization.</dt>
+                        </li>
+
+                    </dl>
+                </ul>
+            </div>
+            <div><b><i>Limitations and Lessons Learned:</i></b>
+                <ul>
+                    <li><i>Tableau</i> – Tableau is poorly optimized and doesn't translate well to mobile (or to small
+                        browser
+                        windows) and can only be customized up to a point. I chose it because I wasn't sure what form
+                        the final
+                        visualization would take or even if I could embed a visualization at all, but if I knew this was
                         the
-                        city's property assessment database, which includes coordinates for each address, thus allowing
-                        them to
-                        be mapped.</dd>
-                </li>
-                <li>
-                    <dt>Tableau – Used to generate a dashboard featuring a choropleth map showing the frequency of
-                        variance
-                        requests by neighborhood, a map showing every variance request in the city and how the zoning
-                        board
-                        ruled on it, a bar chart showing the frequency of each ruling, and a dropdown menu allowing
-                        filtering by
-                        category.</dt>
-                </li>
-                <li>
-                    <dt>OpenRefine – Used to consolidate zoning variances into arbitrary categories to clean up the
-                        visualization.</dt>
-                </li>
+                        product I would create from the beginning I would make it with D3.</li>
+                </ul>
+            </div>
+        </div>
 
-            </dl>
-        </ul>
+        <div class="column">
+            <div class='tableauPlaceholder' id='viz1674150786525' style='position: relative '><noscript><a
+                        href='https:&#47;&#47;buffalonews.com&#47;'><img
+                            alt='Zoning Variance Requests in Buffalo, NY (2017-2022) '
+                            src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Zo&#47;ZoningVarianceRequestsinBuffaloNY2017-2022&#47;ZoningVarianceRequestsinBuffaloNY2017-2022&#47;1_rss.png'
+                            style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name'
+                        value='ZoningVarianceRequestsinBuffaloNY2017-2022&#47;ZoningVarianceRequestsinBuffaloNY2017-2022' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Zo&#47;ZoningVarianceRequestsinBuffaloNY2017-2022&#47;ZoningVarianceRequestsinBuffaloNY2017-2022&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object></div>
+            <script type='text/javascript' src="js/tableau.js"></script>
+        </div>
     </div>
-    <div><b><i>Limitations and Lessons Learned:</i></b>
-        <ul>
-            <li><i>Tableau</i> – Tableau is poorly optimized and doesn't translate well to mobile (or to small browser
-                windows) and can only be customized up to a point. I chose it because I wasn't sure what form the final
-                visualization would take or even if I could embed a visualization at all, but if I knew this was the
-                product I would create from the beginning I would make it with D3.</li>
-        </ul>
-    </div>
-
-
-    <div class='tableauPlaceholder' id='viz1674150786525' style='position: relative '><noscript><a
-                href='https:&#47;&#47;buffalonews.com&#47;'><img
-                    alt='Zoning Variance Requests in Buffalo, NY (2017-2022) '
-                    src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Zo&#47;ZoningVarianceRequestsinBuffaloNY2017-2022&#47;ZoningVarianceRequestsinBuffaloNY2017-2022&#47;1_rss.png'
-                    style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
-            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-            <param name='embed_code_version' value='3' />
-            <param name='site_root' value='' />
-            <param name='name'
-                value='ZoningVarianceRequestsinBuffaloNY2017-2022&#47;ZoningVarianceRequestsinBuffaloNY2017-2022' />
-            <param name='tabs' value='no' />
-            <param name='toolbar' value='yes' />
-            <param name='static_image'
-                value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Zo&#47;ZoningVarianceRequestsinBuffaloNY2017-2022&#47;ZoningVarianceRequestsinBuffaloNY2017-2022&#47;1.png' />
-            <param name='animate_transition' value='yes' />
-            <param name='display_static_image' value='yes' />
-            <param name='display_spinner' value='yes' />
-            <param name='display_overlay' value='yes' />
-            <param name='display_count' value='yes' />
-            <param name='language' value='en-US' />
-        </object></div>
-    <script type='text/javascript' src="js/tableau.js"></script>
 
     <h3><a
             href="https://buffalonews.com/news/local/where-are-all-the-airbnb-rentals-buffalo-officials-unable-to-track-them-despite-law/article_a20b4a3a-1434-11ed-831f-93db05749448.html">Where
@@ -122,6 +151,7 @@
         </p>
     </div>
 
+
     <div><b><i>Tools used:</i></b>
         <ul>
             <dl>
@@ -130,7 +160,8 @@
                     <dd>Pandas – Used to clean, filter, sort, and export data.</dd>
                 </li>
                 <li>
-                    <dt>ObserableHQ (JavaScript) – Used to generate an interactive choropleth map showing where Airbnb listings are located, using a</dt>
+                    <dt>ObserableHQ (JavaScript) – Used to generate an interactive choropleth map showing where Airbnb
+                        listings are located, using a</dt>
                     <dd>Leaflet.js – Used to generate the map, captions, legend, and labels.</dd>
                     <dd>D3.js Used to generate colors and the year slider.</dd>
                 </li>
@@ -143,39 +174,39 @@
         </ul>
     </div>
     <iframe id="embed" width="50%" height="500" frameborder="0"
-  src="https://observablehq.com/embed/@coreydockser/leaflet-airbnb?cells=viewof+container"></iframe>
-  <script type="module">
+        src="https://observablehq.com/embed/@coreydockser/leaflet-airbnb?cells=viewof+container"></iframe>
+    <script type="module">
 
-    // Select the embed iframe.
-    const iframe = document.querySelector("#embed");
-    
-    // The Embedly protocol is to send the height as part of a stringified object.
-    // In this example, the resize message is the only message being sent; however,
-    // the checks are good practice, lest we try to interpret unrelated messages as
-    // resize events. https://docs.embed.ly/v1.0/docs/provider-height-resizing
-    function onMessage(message) {
-      if (message.source !== iframe.contentWindow) return;
-      let {data} = message;
-    
-      // If message isn’t valid JSON, it must not be our resize event.
-      if (typeof data === "string") {
-        try {
-          data = JSON.parse(data);
-        } catch (ignore) {
-          return;
+        // Select the embed iframe.
+        const iframe = document.querySelector("#embed");
+
+        // The Embedly protocol is to send the height as part of a stringified object.
+        // In this example, the resize message is the only message being sent; however,
+        // the checks are good practice, lest we try to interpret unrelated messages as
+        // resize events. https://docs.embed.ly/v1.0/docs/provider-height-resizing
+        function onMessage(message) {
+            if (message.source !== iframe.contentWindow) return;
+            let { data } = message;
+
+            // If message isn’t valid JSON, it must not be our resize event.
+            if (typeof data === "string") {
+                try {
+                    data = JSON.parse(data);
+                } catch (ignore) {
+                    return;
+                }
+            }
+
+            // Make sure it’s the resize event.
+            if (data.context !== "iframe.resize") return;
+
+            // Set the iframe’s height!
+            iframe.style.height = `${data.height}px`;
         }
-      }
-    
-      // Make sure it’s the resize event.
-      if (data.context !== "iframe.resize") return;
-    
-      // Set the iframe’s height!
-      iframe.style.height = `${data.height}px`;
-    }
-    
-    // Attach our listener for the message from the iframe
-    addEventListener("message", onMessage);
-    
+
+        // Attach our listener for the message from the iframe
+        addEventListener("message", onMessage);
+
     </script>
 
 

@@ -3,17 +3,13 @@ const headerTemplate = document.createElement('template')
 headerTemplate.innerHTML = `
 <style>
 
-header {
-    font-family: 'Times New Roman', Times, serif;
-    
-}
 
 h1 {
     text-align: center;
   margin: 0 0 auto auto;
 
   padding: 20px 0;
-  text-shadow: 2px 2px 1px lightgray;
+ 
   
 
 }
