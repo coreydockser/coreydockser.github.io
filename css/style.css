@@ -1,24 +1,59 @@
 html {
-   background-color: white;
-   font-family: 'Merriweather', serif;
+    background-color: white;
+    font-family: 'Merriweather', serif;
 }
+
+/*.row {
+    display: flex;
+}*/
 
 .column {
     float: left;
-    width: 30%;
+}
+
+.left {
+    width: 60%;
+}
+
+.right {
+    width: 40%;
 }
 
 .row:after {
-    content:"";
+    content: "";
     display: table;
     clear: both;
 }
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+
+    .left .right {
+        width: 100%;
+    }
+
+
+
+}
+
+.center_text {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.tableau {
+    display: table;
+    margin: auto;
+}
+
+
+
+
 
 
 h2 h3 h4 {
     padding: 0 0 0 0;
     margin: 0 auto;
 }
-
-
-
