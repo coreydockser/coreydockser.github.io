@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Work | Corey Dockser</title>
     <link href="css/style.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="img/scrungle.jpeg">
     <script src="components/header.js" type="text/javascript" defer></script>
@@ -18,10 +18,8 @@
 
 <body>
     <header-component></header-component>
-
+    <div class="center_text">
     <h2> Clippings: Data Visualization</h2>
-    <div class="row">
-        <div class="column">
             <h3><a
                     href="https://buffalonews.com/news/local/five-years-under-buffalos-green-code-70-of-variance-requests-are-granted/article_be3f696a-f2f2-11ec-b7e2-8bac03dacf3d.html">Five
                     years under Buffalo's Green Code: 70% of variance requests are granted</a></h3>
@@ -108,32 +106,16 @@
             </div>
         </div>
 
-        <div class="column">
-            <div class='tableauPlaceholder' id='viz1674150786525' style='position: relative '><noscript><a
-                        href='https:&#47;&#47;buffalonews.com&#47;'><img
-                            alt='Zoning Variance Requests in Buffalo, NY (2017-2022) '
-                            src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Zo&#47;ZoningVarianceRequestsinBuffaloNY2017-2022&#47;ZoningVarianceRequestsinBuffaloNY2017-2022&#47;1_rss.png'
-                            style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
-                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                    <param name='embed_code_version' value='3' />
-                    <param name='site_root' value='' />
-                    <param name='name'
-                        value='ZoningVarianceRequestsinBuffaloNY2017-2022&#47;ZoningVarianceRequestsinBuffaloNY2017-2022' />
-                    <param name='tabs' value='no' />
-                    <param name='toolbar' value='yes' />
-                    <param name='static_image'
-                        value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Zo&#47;ZoningVarianceRequestsinBuffaloNY2017-2022&#47;ZoningVarianceRequestsinBuffaloNY2017-2022&#47;1.png' />
-                    <param name='animate_transition' value='yes' />
-                    <param name='display_static_image' value='yes' />
-                    <param name='display_spinner' value='yes' />
-                    <param name='display_overlay' value='yes' />
-                    <param name='display_count' value='yes' />
-                    <param name='language' value='en-US' />
-                </object></div>
-            <script type='text/javascript' src="js/tableau.js"></script>
+            <div class="tableau">
+            <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+            <tableau-viz id ="tableauViz" src="https://public.tableau.com/views/ZoningVarianceRequestsinBuffaloNY2017-2022/ZoningVarianceRequestsinBuffaloNY2017-2022?:language=en-US&:display_count=n&:origin=viz_share_link"></tableau-viz>
+            </tableau-viz>
         </div>
-    </div>
-
+        
+             
+        
+    
+    <div class="center_text">
     <h3><a
             href="https://buffalonews.com/news/local/where-are-all-the-airbnb-rentals-buffalo-officials-unable-to-track-them-despite-law/article_a20b4a3a-1434-11ed-831f-93db05749448.html">Where
             are all the Airbnb rentals? Buffalo officials unable to track them despite law</a></h3>
@@ -173,7 +155,8 @@
             </dl>
         </ul>
     </div>
-    <iframe id="embed" width="50%" height="500" frameborder="0"
+
+    <iframe id="embed" width="100%" height="500" frameborder="0" 
         src="https://observablehq.com/embed/@coreydockser/leaflet-airbnb?cells=viewof+container"></iframe>
     <script type="module">
 
@@ -208,6 +191,8 @@
         addEventListener("message", onMessage);
 
     </script>
+    </div>
+    
 
 
 
