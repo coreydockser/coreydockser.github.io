@@ -3,39 +3,19 @@ html {
     font-family: 'Merriweather', serif;
 }
 
-/*.row {
-    display: flex;
-}*/
-
-.column {
-    float: left;
+.bio-frame {
+    
 }
 
-.left {
-    width: 60%;
-}
-
-.right {
-    width: 40%;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-@media screen and (max-width: 600px) {
-    .column {
-        width: 100%;
-    }
-
-    .left .right {
-        width: 100%;
-    }
-
-
-
+.bio {
+    
+    width: 50%;
+    position: absolute;
+    z-index: 1;
+    align-self: flex-end;
+    margin: 10px 10px 10px 10px;
+    background-color: rgb(255, 255, 255);
+    bottom: 25em;
 }
 
 .center_text {
