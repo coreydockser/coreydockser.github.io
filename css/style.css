@@ -3,20 +3,34 @@ html {
     font-family: 'Merriweather', serif;
 }
 
-.bio-frame {
+
+#bio-text {
     
+    margin: auto;
 }
 
-.bio {
-    
-    width: 50%;
+#bio {
     position: absolute;
-    z-index: 1;
-    align-self: flex-end;
-    margin: 10px 10px 10px 10px;
+    width: 30em;
+    padding: 10px;
+    background-color: white; 
+    margin-left: 20px;
     background-color: rgb(255, 255, 255);
-    bottom: 25em;
+    bottom: 18em;
+    box-sizing: border-box;
+    z-index: 1;
 }
+
+#frontpage {
+    position: absolute;
+    height: 100%;
+
+    z-index: 0;
+   
+
+}
+
+
 
 .center_text {
     max-width: 1000px;
