@@ -49,9 +49,9 @@ Corey Dockser, Data Journalist
 </h1>
   <nav>
     <ul>
-      <li><a href="html/about.html">About</a></li>
+      <li><a href="/html/about.html">About</a></li>
       <li><a href="/index.html">Work</a></li>
-      <li><a href="html/contact.html">Contact</a></li>
+      <li><a href="/html/contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
